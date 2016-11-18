@@ -1,0 +1,152 @@
+---
+layout:     post
+title:      "Docker #01 - O que é e instalação"
+subtitle:   "Entendendo um pouco sobre a baleia azul."
+date:       2016-02-07 00:22:00
+author:     "Leonardo S. Monteiro"
+header-img: "/i.imgur.com/pBImEY3.jpg"
+comments : true
+permalink: "3"
+---
+
+Como havia comentado no post anterior, já configurei o Sublime Text 3 e o Zsh,
+ agora é a vez do Docker. _Here we go_.
+
+#### Mas o que é Docker?
+
+Segundo o github deles:
+
+```
+Docker is an open source project to pack, ship and run any application as a lightweight container.
+```
+
+Levando isso para o português literal seria:
+
+```
+Docker é um projeto open source para empacotar, entregar e executar qualquer aplicação como um recipiente leve.
+```
+
+A minha descrição é:
+
+```
+Docker é uma pessoa que tem múltiplas personalidades e disfarces, quem dá isso a ele é você.
+```
+
+Docker é um gerenciador de containers, ou seja, ele é responsável por cuidar de
+ diversas 'máquinas virtuais' que são executadas diretamente a nível do sistema
+ operacional(com a bibliotecas do sistema hospedeiro).
+
+
+
+#### Entendendo o que são containers
+
+Docker trabalha com uma espécie LinuX Containers(LXC), os Docker Containers.
+ Esses containers como dito antes, são como 'máquinas virtuais', porém estas
+ são isoladas individualmente, e elas compartilham as mesmas bibliotecas, ou seja,
+ compartilharam o mesmo _Kernel Linux_. Isso é possível graças a um recurso do Kernel
+ chamado _cgroups_ que gerencia e isola os recursos do sistema como CPU, memória,
+ etc., desta maneira o sobre carregamento da máquina é reduzido, pois quando o
+ container é iniciado somente o processo é solicitado é executado.
+
+Comparação de uma máquina virtual para um container:
+ ![](http://i.imgur.com/nUwlSJ3.jpg)
+**Obs.:** _Esse compartilhamento nativo de biblioteca funciona somente com Linux._
+ _Uma vez que o Docker é instalado no Windows ou Mac ele irá criar uma máquina_ 
+ _virtual com Linux para depois assim ter o sistema de forma 'nativa'._
+
+#### Entendendo o que são _Docker Images_
+
+Docker Images são a base do container. São versões minimalistas de distribuições
+ Linux. Uma vez que somente o Kernel é compartilhado, todos os binários e as outras
+ bibliotecas são providas destas imagens, que podem ou não estar rodando em diferentes
+ containers. Essas imagens por sua vez tem suas camadas de arquivos e ela não
+ possui estado e NUNCA muda.
+
+#### A mágica do Docker
+
+A grande sacada Docker além de você poder ter vários processos isolados rodando,
+ em cada um dos containers, o Docker oferece também a possibilidades de você
+ dar um _commit_ em uma Docker Image e salvar as alterações feitas nela e tudo
+ que alteramos dentro daquele container será mantido. Outra grande sacada do Docker
+ é o seu Dockerfile. Ele é uma espécie de receita de bolo de maçã para a criação
+ de uma Docker Image. Para explicar melhor isso, imagine o seguinte: você ou alguma 
+ pessoa cria um Dockerfile, que contém todas a instruções de quais pacotes com suas
+ respectivas versões devem ser instaladas em uma Docker Image, de maneira que
+ fique o mais próximo possível do ambiente de produção. Após isso, ela repassa
+ esse Dockerfile para os outros integrantes do projeto, desta maneira terão a
+ receita do Docker Image e os ambientes de desenvolvimento ficarão exatamente
+ iguais, e acabará a desculpa "Na minha máquina funciona".
+
+#### Requisitos Docker
+
+* Kernel Linux 3.10+
+
+A partir desta versão o Kernel Linux passa a substituir UnionFS pelo driver,
+ AUFS(Another UnionFS), que cuida de gerenciar vários arquivos, diretórios,
+ e recursos do _host_, como se você um coisa só e de maneira unificada. Também
+ houve melhoras de desempenho em relação ao driver anterior.
+
+Para verificar se você cumpre com o requesito execute isto, ele irá retornar a
+ versão do seu Kernel Linux:
+
+    uname -r
+![](http://i.imgur.com/P7LZj9B.jpg)
+
+#### Instalação do Docker
+
+Uma das maneiras mais práticas para instalação do Docker é usar um script pronto:
+
+    curl -sSL https://get.docker.com/ | sh
+
+ou se preferir um _wget_:
+
+    wget -qO- https://get.docker.com/ | sh
+
+Esse script baixará todos os arquivos necessários e executará a instalação do
+ Docker. Após concluída a instalação, precisamos iniciar o Docker:
+
+    /etc/init.d/docker start
+
+Para verificar se o Docker foi instalado corretamente e agora está rodando sem
+ problemas:
+
+    docker run hello-world
+
+Irá aparecer algo parecido com isto:
+![](http://i.imgur.com/3pd6hnI.jpg)
+Se caso ele não estiver rodando, irá aparecer isso:
+![](http://i.imgur.com/S7zrHhZ.jpg)
+
+Outro motivo que pode causar este mesmo erro, é se o Docker necessita de privilégios
+ _root_, para isso use _sudo_:
+
+    docker run hello-world
+
+Para ver informações sobre a quantidade de containers, imagens e outras coisas,
+use isto:
+
+    docker info
+
+![](http://i.imgur.com/xIgbxAt.jpg)
+
+Para que você não precise sempre dar privilégios através do _sudo_ toda vez para
+o Docker, podemos adicioná-lo ao nosso grupo de usuário, deste jeito:
+
+    sudo usermod -aG docker <SeuNomeDeUsuarioAqui>
+
+E finalmente para encerrar o Docker:
+
+    /etc/init.d/docker stop
+
+Pronto! Com o Docker instalado, em breve falaremos um pouco mais sobre Docker Images
+ e containers, para começarmos a ter tudo em nossa máquina, sem ter nada, afinal
+ como dito antes, não passa de disfarces!
+
+ :)
+
+---
+Links:
+
+>[Sublime e Terminal](http://quatroka.github.io/2/)
+>
+>[Docker](https://www.Docker.com/)
