@@ -1,13 +1,13 @@
 ---
-Title: Sobre
-Date: 2015-12-06 15:17:00
-Category: personal
-Tags: personal, quatroka, sobre, about
-Slug: about
-Authors: Quatroka
-Summary: Oi, eu sou o Leo.
+layout:     page
+title:      "Sobre"
+date:       2015-12-06 15:17:00
+author:     "Quatroka"
 header-img: "//i.imgur.com/ApMk8TW.jpg"
+comments : true
+permalink: "/about/"
 ---
+
 
 "Nem sempre cenouras e batatas ficam com o mesmo gosto na 'carne de panela'. "
 Oi, meu nome é Leonardo Santos Monteiro, 18 anos e moro em São Paulo.
