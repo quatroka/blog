@@ -14,18 +14,21 @@ body::before {
   top: 0;
   position: fixed;
 }
-@media (max-width: 512px)  and (min-resolution: 1.5dppx),
+
+@media (max-width: 512px) and (min-resolution: 1.5dppx),
 (max-width: 1024px) and (max-resolution: 1.5dppx) {
   body::before {
     background-image: url('http://i.imgur.com/0uBLgIR.jpg');
   }
 }
-@media (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
-(min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
+
+@media (min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx),
+(min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx) {
   body::before {
     background-image: url('http://i.imgur.com/0uBLgIR.jpg');
   }
 }
+
 @media (min-width: 1025px) and (min-resolution: 1.5dppx),
 (min-width: 2049px) and (max-resolution: 1.5dppx) {
   body::before {
@@ -33,3 +36,18 @@ body::before {
   }
 }
 
+.icons-list {
+  li {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 10px;
+  }
+}
+.icons {
+  pointer-events: none;
+  display: block;
+  width: 50px;
+  height: 50px;
+  fill: #FFFFFF;
+}
