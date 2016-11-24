@@ -4,9 +4,12 @@ email: monteiro.leonardosantos@gmail.com
 description: >
   Quatroka's Blog. Statistics, projects and postings on various subjects. - By: Leonardo S. Monteiro
 baseurl: ""
-url: "http://quatroka.github.io" # the base hostname & protocol for your site
+url: "https://quatroka.github.io" # the base hostname & protocol for your site
+facebook_username: quatroka
 twitter_username: quatroka
+medium_username: quatroka
 github_username:  quatroka
+linkedin_username: quatroka
 
 # Build settings
 markdown: kramdown
