@@ -3,8 +3,8 @@ layout:     post
 title:      "Sublime e Terminal"
 subtitle:   "Embelezando as coisas."
 date:       2016-01-13 00:17:00
-author:     "Leonardo S. Monteiro"
-header-img: "/i.imgur.com/koMcnli.jpg"
+author:     "Quatroka"
+header-img: "https://i.imgur.com/koMcnli.jpg"
 comments : true
 permalink: "2"
 ---
