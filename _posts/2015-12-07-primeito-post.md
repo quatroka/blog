@@ -3,8 +3,8 @@ layout:     post
 title:      "Primeiro Post"
 subtitle:   "O porque de tudo! Ou não."
 date:       2015-12-07 15:17:00
-author:     "Leonardo S. Monteiro"
-header-img: "/i.imgur.com/fVn04gt.jpg"
+author:     "Quatroka"
+header-img: "https://i.imgur.com/fVn04gt.jpg"
 comments : true
 permalink: "1"
 ---

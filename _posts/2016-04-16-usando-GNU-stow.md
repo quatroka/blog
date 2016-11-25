@@ -3,8 +3,8 @@ layout:     post
 title:      "GNU Stow"
 subtitle:   "Organizando dotfiles."
 date:       2016-04-16 18:02:00
-author:     "Leonardo S. Monteiro"
-header-img: "/i.imgur.com/fVn04gt.jpg"
+author:     "Quatroka"
+header-img: "https://i.imgur.com/fVn04gt.jpg"
 comments : true
 permalink: "5"
 ---
