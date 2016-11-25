@@ -3,9 +3,9 @@ layout:     page
 title:      "Sobre"
 date:       2015-12-06 15:17:00
 author:     "Quatroka"
-header-img: "//i.imgur.com/ApMk8TW.jpg"
+header-img: "https://i.imgur.com/ApMk8TW.jpg"
 comments : true
-permalink: "/about/"
+permalink: "about"
 ---
 
 
