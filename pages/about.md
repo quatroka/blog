@@ -5,7 +5,7 @@ date:       2015-12-06 15:17:00
 author:     "Quatroka"
 header-img: "https://i.imgur.com/ApMk8TW.jpg"
 comments : true
-permalink: "about"
+permalink: "/about/"
 ---
 
 

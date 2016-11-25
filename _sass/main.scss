@@ -2,6 +2,9 @@
   Custom CSS
 */
 
+/*
+  Structure
+*/
 body::before {
   background-size: cover;
   background-attachment: fixed;
@@ -36,25 +39,13 @@ body::before {
   }
 }
 
-.icons-list {
-  li {
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    margin: 10px;
-  }
-}
-.icons {
-  pointer-events: none;
-  display: block;
-  width: 50px;
-  height: 50px;
-  fill: #FFFFFF;
-}
-
+/*
+  Post, Sections.
+*/
 .section-post {
   background-color: #FFFFFF;
   padding: 0px 20px;
+  margin-top: 25px;
 }
 
 img{
@@ -74,4 +65,21 @@ pre{
   code{
     color: #FFFFFF;
   }
+}
+
+/*
+  Footer
+*/
+.icons-list {
+  li {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+  }
+}
+.icons {
+  pointer-events: none;
+  display: block;
+  fill: #FFFFFF;
 }
