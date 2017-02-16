@@ -42,6 +42,6 @@ e tenha uma ideia de projeto pequeno, só dizer!(estou fazendo pela ordem)
 ---
 Links:
 
-> [Curso BeMean](http://dagora.net/be-mean/)
+> [Curso BeMean](https://dagora.net/be-mean/)
 >
 > [Tabela das linguagens](https://docs.google.com/spreadsheets/d/1yrjrMfAi7i7sAvplo_Zc46JkpHQm8XvnEivJkQQ0fMw/edit#gid=0)
