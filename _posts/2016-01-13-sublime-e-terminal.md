@@ -32,7 +32,7 @@ para o zsh: _Oh My Zsh_. Lembrando que você deve possuir o git já instalado.
 
 Feito isso vamos dar reboot no sistema para que todas as alterações sejam feitas.
  Ficará parecido com isto:
- ![](http://i.imgur.com/IVoQosi.png)
+ ![](https://i.imgur.com/IVoQosi.png)
 
 
 Agora é a vez do Sublime Text 3. O site oferece a opção de baixar o pacote _.deb_,
@@ -51,7 +51,7 @@ Para iniciar o Sublime utilizamos o comando _subl_. Pronto! Sublime em nossa
  pacotes para o Sublime. Aperte **ctrl+'**(aspas)(ou **View > Show Console**) e
  cole este código no console que irá abrir:
 
-    import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+    import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'https://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 
 Feito isso, reinicie o sublime. Aperte o **ctrl+shift+p** ele vai abrir uma especie
  de terminal para o sublime(um pouco parecido com Vim), para instalar os
@@ -134,7 +134,7 @@ Calma estamos quase terminando, salve o arquivo. Agora vamos apenas colocar
 ]
 {% endhighlight %}
 
-![](http://i.imgur.com/i35Ny1Y.png)
+![](https://i.imgur.com/i35Ny1Y.png)
 
 Pronto! Terminamos de deixar tudo um pouco mais bonito, e os arquivo estão prontos,
  quando precisar das mesmas configurações é apenas substitui-los no lugar dos originais.
@@ -145,12 +145,10 @@ Pronto! Terminamos de deixar tudo um pouco mais bonito, e os arquivo estão pron
 ---
 Links:
 
->[Zsh](http://www.zsh.org/)
+>[Zsh](https://www.zsh.org/)
 >
 >[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 >
->[Sublime Text 3](http://www.sublimetext.com/3)
+>[Sublime Text 3](https://www.sublimetext.com/3)
 >
 >[Package Control](https://packagecontrol.io/)
->
->[Arquivos de configuração](https://github.com/leomonteiro/dotfiles/tree/master/Sublime)

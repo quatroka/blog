@@ -34,12 +34,12 @@ GNU Stow é um gerenciador de links do sistema para dotfiles. Ele cria link de
 Primeiramente vamos olhar os _dotfiles_ que possuímos e decidir quais iremos
  fazer symlinks, so caso usaremos como exemplo os pertencentes ao Vim e ao Zsh:
 
-![](http://i.imgur.com/CFBmA3W.jpg)
+![](https://i.imgur.com/CFBmA3W.jpg)
 
 Segundo, criaremos uma pasta chamada 'dotfiles' e nossa pasta de usuário mesmo.
  Dentro dela moveremos os arquivos do Vim e do Zsh, cada conjunto em um diretório.
 
-![](http://i.imgur.com/8OvCBsR.jpg)
+![](https://i.imgur.com/8OvCBsR.jpg)
 
 O GNU Stow trata cada diretório como um _pacote_, então para que ele possa gerar os
  symlinks, utilizaremos os nomes dos diretórios desta forma:
@@ -51,7 +51,7 @@ stow zsh
 > Caso queira mudar o lugar ou nome da pasta dotfiles(deault), crie a pasta pretendida,
 >  e acrescente as opções `--dir=caminho/para/o/diretório` e `--target=caminho/onde/será/criado/o/symlink`.
 
-![](http://i.imgur.com/f9ekl6O.jpg)
+![](https://i.imgur.com/f9ekl6O.jpg)
 
 Pronto! Ele criou os symslinks ( o próprio terminal já identifica como um ), e
  você tem seus dotfiles reunidos em um só lugar. Outra vantagem do GNU Stow é a
