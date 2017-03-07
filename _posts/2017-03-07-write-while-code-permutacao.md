@@ -2,7 +2,7 @@
 layout:     post
 title:      "Write while code - Permutação"
 subtitle:   "Organizando dotfiles."
-date:       2017-03-02 18:47:02
+date:       2017-03-02 17:47:02
 author:     "Quatroka"
 header-img: "https://i.imgur.com/koMcnli.jpg"
 comments : true
