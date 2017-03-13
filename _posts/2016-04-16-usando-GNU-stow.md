@@ -6,7 +6,7 @@ date:       2016-04-16 18:02:00
 author:     "Quatroka"
 header-img: "https://i.imgur.com/fVn04gt.jpg"
 comments : true
-permalink: "5"
+categories: ["tools", "GNU"]
 ---
 
 Recentemente me estressei bastante com meu Ubuntu ( que tecnicamente foi culpa

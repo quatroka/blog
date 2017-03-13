@@ -2,17 +2,20 @@
 title: Quatroka | Blog
 email: monteiro.leonardosantos@gmail.com
 description: >
-  Quatroka's Blog. Statistics, projects and postings on various subjects. - By: Leonardo S. Monteiro
+    Quatroka's Blog. Statistics, projects and postings on various subjects. - By: Leonardo S. Monteiro
 baseurl: "/"
 url: "https://quatroka.github.io"
-facebook_username: quatroka
-twitter_username: quatroka
-medium_username: quatroka
-github_username:  quatroka
-linkedin_username: quatroka
+permalink: ":categories/:title"
 
 # Build settings
 markdown: kramdown
 sass:
     sass_dir: _sass
     style: compressed
+
+# Social networks
+facebook_username: quatroka
+twitter_username: quatroka
+medium_username: quatroka
+github_username:  quatroka
+linkedin_username: leosmonteiro

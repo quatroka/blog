@@ -6,7 +6,7 @@ date:       2015-12-07 15:17:00
 author:     "Quatroka"
 header-img: "https://i.imgur.com/fVn04gt.jpg"
 comments : true
-permalink: "1"
+categories: ["personal", "motivation"]
 ---
 
 Oi, meu nome é Leo.

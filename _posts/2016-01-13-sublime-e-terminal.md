@@ -6,7 +6,7 @@ date:       2016-01-13 00:17:00
 author:     "Quatroka"
 header-img: "https://i.imgur.com/koMcnli.jpg"
 comments : true
-permalink: "2"
+categories: [personalization, sublime-text, zsh]
 ---
 
 Estou ansiosamente esperando o Ubuntu 16.04 LTS(sim, só porque tá bonito), e
