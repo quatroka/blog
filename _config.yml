@@ -12,8 +12,9 @@ markdown: kramdown
 sass:
     sass_dir: _sass
     style: compressed
+
 gems:
-    - jekyll-time-to-read
+  - jekyll-time-to-read
 
 # Social networks
 facebook_username: quatroka
