@@ -3,21 +3,10 @@ layout: default
 ---
 <div class="row">
 {% for post in site.posts %}
-    <div class="col s12 m6 l4">
-        <div class="card small z-depth-3">
-            <div class="card-image">
-                <img src="{{ post.header-img }}">
-                <span class="card-title">{{ post.title }}</span>
-            </div>
-            <div class="card-content">
-                <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-                <p>{{ post.subtitle }}</p>
-            </div>
-            <div class="card-action">
-                <a href="{{ post.url | prepend: site.url }}">Ler mais</a>
-            </div>
-        </div>
-    </div>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+    <p>{{ post.subtitle }}</p>
+    <a href="{{ post.url | prepend: site.url }}">Ler mais</a>
 {% endfor %}
 </div>
 

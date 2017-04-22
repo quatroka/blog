@@ -1,9 +1,16 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Imports file
 ---
 
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "syntax-highlighting",
+"partials/_unsemantic-vars",
+"partials/_reset",
+"partials/_text",
+"partials/_ie",
+"partials/_unsemantic-ie-snap",
+"partials/_unsemantic-grid-responsive",
+"partials/_unsemantic-grid-responsive-tablet",
 "main";
