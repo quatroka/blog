@@ -37,21 +37,12 @@ header nav ul.menu {
 /*
   Post, Sections.
 */
-//.section-post {
-//  background-color: #FFFFFF;
-//  padding: 0px 20px;
-//  margin-top: 25px;
-//}
-//
-//img{
-//  width: 80%;
-//  display:block;
-//  margin: 0 auto;
-//}
-//
-//blockquote {
-//  border-left: 5px solid #00BCD4;
-//}
+section ul.categories-inline {
+  text-decoration: none;
+  li {
+    display: inline-block;
+  }
+}
 
 pre {
   background-color: #000000;

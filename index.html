@@ -1,13 +1,21 @@
 ---
 layout: default
 ---
-<div class="row">
 {% for post in site.posts %}
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+<section>
+    <h2>
+        <a href="{{ post.url | prepend: site.url }}">
+            {{ post.title }}
+        </a>
+    </h2>
     <p>{{ post.subtitle }}</p>
-    <a href="{{ post.url | prepend: site.url }}">Ler mais</a>
+    <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+    <ul class="categories-inline">
+        {% for category in post.categories %}
+        <li>{{ category }}</li>
+        {% endfor %}
+    </ul>
+</section>
 {% endfor %}
-</div>
 
-<!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+
