@@ -8,14 +8,14 @@ layout: default
             {{ post.title }}
         </a>
     </h2>
-    <p>{{ post.subtitle }}</p>
+    <p>{{ post.subtitle }} {{ post.content | reading_time_as_i }} read</p>
     <p>{{ post.date | date: "%b %-d, %Y" }}</p>
     <ul class="categories-inline">
         {% for category in post.categories %}
         <li>{{ category }}</li>
         {% endfor %}
     </ul>
-    <p>{{ post.content | reading_time_as_i }} to read</p>
+
 </section>
 {% endfor %}
 

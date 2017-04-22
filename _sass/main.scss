@@ -12,10 +12,36 @@ $geral-font: 'Source Code Pro', monospace;
 }
 
 /*
+   Mixins
+ */
+@mixin list-clean() {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+$font-size: 150%;
+@mixin font-size-reduction($reduction) {
+  font-size: $font-size - $reduction;
+  a {
+    font-size: $font-size - $reduction;
+  }
+}
+
+/*
    Helpers
  */
 .line-separator {
   size: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: #ff3d00;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 /*
@@ -23,15 +49,11 @@ $geral-font: 'Source Code Pro', monospace;
  */
 header nav h1 a {
   text-decoration: none;
-  font-size: 150%;
 }
 
 header nav ul.menu {
   font-size: 125%;
-  list-style: none;
-  li {
-    display: inline-block;
-  }
+  @include list-clean();
 }
 
 /*
@@ -44,7 +66,16 @@ section ul.categories-inline {
   }
 }
 
+/*
+  Code Highlight
+*/
+
 pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
   background-color: #000000;
   border-radius: 5px;
   padding: 10px;
@@ -53,13 +84,11 @@ pre {
   }
 }
 
-/*
-  Code Highlight
-*/
-
 pre.highlight {
   background: #000000;
 }
+
+
 
 /*
   Footer
@@ -76,5 +105,43 @@ pre.highlight {
 .icons {
   pointer-events: none;
   display: block;
-  fill: #FFFFFF;
+  fill: #000000;
+}
+
+.page-inline {
+    @include list-clean();
+}
+
+/*
+   Text
+ */
+h1{
+  @include font-size-reduction(0%);
+}
+
+h2 {
+  @include font-size-reduction(10%);
+}
+
+h3 {
+  @include font-size-reduction(20%);
+}
+
+h4 {
+  @include font-size-reduction(30%);
+}
+
+h5 {
+  @include font-size-reduction(40%);
+}
+
+p {
+  @include font-size-reduction(50%);
+}
+
+/*
+   Images
+ */
+img {
+  max-width: 100%;
 }
