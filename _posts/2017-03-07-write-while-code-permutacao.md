@@ -6,7 +6,7 @@ date:       2017-03-02 17:47:02
 author:     "Quatroka"
 header-img: "https://i.imgur.com/koMcnli.jpg"
 comments : true
-categories: ["math", "write-while-code"]
+categories: ["write-while-code", "math"]
 ---
 
 

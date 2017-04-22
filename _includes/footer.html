@@ -1,76 +1,57 @@
-<footer class="page-footer cyan">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">{{ site.title }}</h5>
-                <p class="grey-text text-lighten-4">{{ site.description }}</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Pages</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="{{ site.url }}">Home</a></li>
-                    {% for page in site.pages %}
-                    {% if page.title %}
-                    <li>
-                        <a class="grey-text text-lighten-3" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <ul class="icons-list">
-                    <li>
-                        <a href="https://www.facebook.com/{{ site.facebook_username }}">
-                            <object class="icons" type="image/svg+xml" data="{{ "img/icons/facebook.svg" | prepend: site.baseurl }}">Your browser does
-                                not support SVGs
-                            </object>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}">
-                            <object class="icons" type="image/svg+xml" data="{{ "img/icons/twitter.svg" | prepend: site.baseurl }}">Your browser does
-                                not support SVGs
-                            </object>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/{{ site.github_username }}">
-                            <object class="icons" type="image/svg+xml" data="{{ "img/icons/github.svg" | prepend: site.baseurl }}">Your browser does not
-                                support SVGs
-                            </object>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://medium.com/@{{ site.medium_username }}">
-                            <object class="icons" type="image/svg+xml" data="{{ "img/icons/medium.svg"  | prepend: site.baseurl }}">Your browser does not
-                                support SVGs
-                            </object>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://br.linkedin.com/in/{{ site.linkedin_username }}">
-                            <object class="icons" type="image/svg+xml" data="{{ "img/icons/linkedin.svg" | prepend: site.baseurl }}">Your browser does
-                                not support SVGs
-                            </object>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<hr class="line-separator">
+<footer>
+    <div class="grid-50">
+        <h5>{{ site.title }}</h5>
+        <p class="grey-text text-lighten-4">{{ site.description }}</p>
+        <ul class="icons-list">
+            <li>
+                <a href="https://www.facebook.com/{{ site.facebook_username }}">
+                    <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/facebook.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/{{ site.twitter_username }}">
+                    <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/twitter.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/{{ site.github_username }}">
+                    <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/github.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+                </a>
+            </li>
+            <li>
+                <a href="https://medium.com/@{{ site.medium_username }}">
+                    <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/medium.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+                </a>
+            </li>
+            <li>
+                <a href="https://br.linkedin.com/in/{{ site.linkedin_username }}">
+                    <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/linkedin.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+                </a>
+            </li>
+        </ul>
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-           Quatroka © MIT License
-        </div>
+    <div class="grid-50">
+        <h5>Pages</h5>
+        <ul class="page-inline">
+            <li><a href="{{ site.url }}">Home</a></li>
+            {% for page in site.pages %}
+            {% if page.title %}
+            <li>
+                <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}
+                </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+
+        </ul>
+    </div>
+    <div class="grid-100">
+        <p>Quatroka © MIT License</p>
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
     </div>
 </footer>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-<script type="text/javascript" src="{{ "js/main.js" | prepend: site.baseurl }}"></script>
+
+<script type="text/javascript" src="{{ "assets/js/main.js" | prepend: site.baseurl }}"></script>
 

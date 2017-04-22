@@ -1,69 +1,68 @@
 /*
   Custom CSS
 */
+/*
+  Font
+*/
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+$geral-font: 'Source Code Pro', monospace;
+* {
+  font-family: $geral-font;
+}
 
 /*
-  Structure
-*/
-body::before {
-  background-size: cover;
-  background-attachment: fixed;
-  content: '';
-  will-change: transform;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  position: fixed;
-}
-
-@media (max-width: 512px) and (min-resolution: 1.5dppx),
-(max-width: 1024px) and (max-resolution: 1.5dppx) {
-  body::before {
-    background-image: url('https://i.imgur.com/0uBLgIR.jpg');
+   Mixins
+ */
+@mixin list-clean() {
+  list-style: none;
+  li {
+    display: inline-block;
   }
 }
 
-@media (min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx),
-(min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx) {
-  body::before {
-    background-image: url('https://i.imgur.com/0uBLgIR.jpg');
+$font-size: 150%;
+@mixin font-size-reduction($reduction) {
+  font-size: $font-size - $reduction;
+  a {
+    font-size: $font-size - $reduction;
   }
 }
 
-@media (min-width: 1025px) and (min-resolution: 1.5dppx),
-(min-width: 2049px) and (max-resolution: 1.5dppx) {
-  body::before {
-    background-image: url('https://i.imgur.com/0uBLgIR.jpg');
-  }
+/*
+   Helpers
+ */
+.line-separator {
+  size: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: #ff3d00;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+   Header
+ */
+header nav h1 a {
+  text-decoration: none;
+}
+
+header nav ul.menu {
+  font-size: 125%;
+  @include list-clean();
 }
 
 /*
   Post, Sections.
 */
-.section-post {
-  background-color: #FFFFFF;
-  padding: 0px 20px;
-  margin-top: 25px;
-}
-
-img{
-  width: 80%;
-  display:block;
-  margin: 0 auto;
-}
-
-blockquote {
-  border-left: 5px solid #00BCD4;
-}
-
-pre{
-  background-color: #000000;
-  border-radius: 5px;
-  padding: 10px;
-  code{
-    color: #FFFFFF;
+section ul.categories-inline {
+  text-decoration: none;
+  li {
+    display: inline-block;
   }
 }
 
@@ -71,9 +70,25 @@ pre{
   Code Highlight
 */
 
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 10px;
+  code {
+    color: #FFFFFF;
+  }
+}
+
 pre.highlight {
   background: #000000;
 }
+
+
 
 /*
   Footer
@@ -86,8 +101,47 @@ pre.highlight {
     margin: 5px;
   }
 }
+
 .icons {
   pointer-events: none;
   display: block;
-  fill: #FFFFFF;
+  fill: #000000;
+}
+
+.page-inline {
+    @include list-clean();
+}
+
+/*
+   Text
+ */
+h1{
+  @include font-size-reduction(0%);
+}
+
+h2 {
+  @include font-size-reduction(10%);
+}
+
+h3 {
+  @include font-size-reduction(20%);
+}
+
+h4 {
+  @include font-size-reduction(30%);
+}
+
+h5 {
+  @include font-size-reduction(40%);
+}
+
+p {
+  @include font-size-reduction(50%);
+}
+
+/*
+   Images
+ */
+img {
+  max-width: 100%;
 }
