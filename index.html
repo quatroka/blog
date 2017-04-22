@@ -15,6 +15,7 @@ layout: default
         <li>{{ category }}</li>
         {% endfor %}
     </ul>
+    <p>{{ post.content | reading_time_as_i }} to read</p>
 </section>
 {% endfor %}
 
