@@ -13,7 +13,7 @@ permalink: "/about/"
 Oi, meu nome é Leonardo Santos Monteiro, 18 anos e moro em São Paulo.
 Amante platônico por distribuições Linux. E ainda mais quando fico sabendo que é um distribuição brasileira.
 Sou um eterno iniciante! Então estou sempre tentando aprender algo novo, até agora já passei por várias linguagens de programação, mas ainda nenhuma que me identifique de verdade. Enquanto esse dia não chega, por que não procurar algo novo?
-Talvez um melhores coisas que faço é escutar. Ouço pessoas para poder entende-las, fazer com que não haja conflitos futuros.
+Talvez uma das melhores coisas que faço é escutar. Ouço pessoas para poder entende-las, fazer com que não haja conflitos futuros.
     
 Outras descrições:
     
