@@ -1,18 +1,21 @@
 <header>
-    <nav>
-        <h1>
-            <a href="{{ site.url }}">{{ site.title }}</a>
-        </h1>
-        <ul class="menu">
-            <li><a href="{{ site.url }}">Home</a></li>
-            <!--<li><a href="#">Projects</a></li>-->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ site.url }}">{{ site.title }}</a>
+        </div>
 
-            {% for page in site.pages %}
-            {% if page.title %}
-            <li><a href="{{ page.url | prepend: site.url }}">{{ page.title }}</a></li>
-            {% endif %}
-            {% endfor %}
-        </ul>
+        <div class="navbar-menu">
+            <div class="navbar-start"></div>
+            <div class="navbar-end">
+                <a class="navbar-item" href="{{ site.url }}">Home</a>
+                <!--<li><a href="#">Projects</a></li>-->
+                {% for page in site.pages %}
+                    {% if page.title %}
+                        <a class="navbar-item" href="{{ page.url | prepend: site.url }}">{{ page.title }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
     </nav>
 </header>
-<hr class="line-separator"/>

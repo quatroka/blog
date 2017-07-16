@@ -1,22 +1,23 @@
 ---
 layout: default
 ---
-{% for post in site.posts %}
-<section>
-    <h2>
-        <a href="{{ post.url | prepend: site.url }}">
-            {{ post.title }}
-        </a>
-    </h2>
-    <p>{{ post.subtitle }}</p>
-    <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-    <ul class="categories-inline">
-        {% for category in post.categories %}
-        <li>{{ category }}</li>
-        {% endfor %}
-    </ul>
-
-</section>
-{% endfor %}
-
-
+<article>
+    {% for post in site.posts %}
+        <section class="section">
+            <div class="container">
+                <h1 class="title">
+                    <a href="{{ post.url | prepend: site.url }}">
+                        {{ post.title }}
+                    </a>
+                </h1>
+                <h2 class="subtitle">{{ post.subtitle }}</h2>
+                <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+                <ul>
+                    {% for category in post.categories %}
+                    <li>{{ category }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    {% endfor %}
+</article>

@@ -2,17 +2,19 @@
 layout: default
 ---
 <article>
-    <section>
-        <h2>{{ page.title }}</h2>
-        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{
-            page.meta }}{% endif %}</p>
-        <ul class="categories-inline">
-            {% for category in page.categories %}
-            <li>{{ category }}</li>
-            {% endfor %}
-        </ul>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">{{ page.title }}</h1>
+            <h2 class="subtitle">{{ page.subtitle }}</h2>
+            <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{
+                page.meta }}{% endif %}</p>
+            <ul>
+                {% for category in page.categories %}
+                <li>{{ category }}</li>
+                {% endfor %}
+            </ul>
 
-        {{ content }}
-
+            {{ content }}
+        </div>
     </section>
 </article>
