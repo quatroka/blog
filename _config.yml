@@ -13,12 +13,9 @@ sass:
     sass_dir: _sass
     style: compressed
 
-gems:
-  - jekyll-time-to-read
-
 # Social networks
 facebook_username: quatroka
 twitter_username: quatroka
 medium_username: quatroka
 github_username:  quatroka
-linkedin_username: leosmonteiro
+linkedin_username: quatroka
