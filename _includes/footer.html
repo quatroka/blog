@@ -1,36 +1,50 @@
-<hr class="line-separator">
-<footer>
-    <h5>{{ site.title }}</h5>
-    <p>{{ site.description }}</p>
-    <!-- <a href="https://www.facebook.com/{{ site.facebook_username }}">
-        <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/facebook.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
-    </a>
-    <a href="https://twitter.com/{{ site.twitter_username }}">
-        <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/twitter.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
-    </a>
-    <a href="https://github.com/{{ site.github_username }}">
-        <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/github.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
-    </a>
-    <a href="https://medium.com/@{{ site.medium_username }}">
-        <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/medium.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
-    </a>
-    <a href="https://br.linkedin.com/in/{{ site.linkedin_username }}">
-        <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/linkedin.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
-    </a> -->
-    <h5>Pages</h5>
-        <ul>
-            <li><a href="{{ site.url }}">Home</a></li>
-            {% for page in site.pages %}
-                {% if page.title %}
-                    <li>
-                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}
-                        </a>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-        <p>Quatroka © MIT License</p>
-        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<footer class="footer">
+    <div class="container">
+        <div class="content">
+            <div class="columns">
+                <div class="column">
+                    <h5>{{ site.title }}</h5>
+                    <p>{{ site.description }}</p>
+                </div>
+                <div class="column">
+                    <aside class="menu">
+                        <h5>Pages</h5>
+                        <ul class="menu-list menu-list-footer">
+                            <li><a href="{{ site.url }}">Home</a></li>
+                            {% for page in site.pages %}
+                                {% if page.title %}
+                                    <li>
+                                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </aside>        
+                </div>
+            </div>
+            
+            <!-- <a href="https://www.facebook.com/{{ site.facebook_username }}">
+                <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/facebook.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+            </a>
+            <a href="https://twitter.com/{{ site.twitter_username }}">
+                <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/twitter.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+            </a>
+            <a href="https://github.com/{{ site.github_username }}">
+                <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/github.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+            </a>
+            <a href="https://medium.com/@{{ site.medium_username }}">
+                <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/medium.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+            </a>
+            <a href="https://br.linkedin.com/in/{{ site.linkedin_username }}">
+                <object class="icons" type="image/svg+xml" data="{{ "assets/img/icons/linkedin.svg" | prepend: site.baseurl }}">Your browser does not support SVGs </object>
+            </a> -->
+            <div class="has-text-centered">
+                <p>Quatroka © MIT License</p>
+                <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.url }}">via RSS</a></p>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script type="text/javascript" src="{{ "assets/js/main.js" | prepend: site.baseurl }}"></script>
