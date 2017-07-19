@@ -8,13 +8,17 @@ layout: default
             <h2 class="subtitle">{{ page.subtitle }}</h2>
             <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{
                 page.meta }}{% endif %}</p>
-            <ul>
-                {% for category in page.categories %}
-                <li>{{ category }}</li>
-                {% endfor %}
-            </ul>
-
-            {{ content }}
+            <nav class="breadcrumb has-succeeds-separator">
+                <ul>
+                    {% for category in page.categories %}
+                    <li>{{ category }}</li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            
+            <div class="content">
+                {{ content }}
+            </div>
         </div>
     </section>
 </article>
