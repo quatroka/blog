@@ -8,10 +8,14 @@ layout: default
             <h2 class="subtitle">{{ page.subtitle }}</h2>
             <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{
                 page.meta }}{% endif %}</p>
-            <nav class="breadcrumb has-succeeds-separator">
+            <nav class="breadcrumb has-dot-separator">
                 <ul>
                     {% for category in page.categories %}
-                    <li>{{ category }}</li>
+                        <li>
+                            <span class="tag is-primary">
+                                {{ category }}
+                            </span>
+                        </li>
                     {% endfor %}
                 </ul>
             </nav>
