@@ -2,18 +2,18 @@
     <meta charset="utf-8">
 
     <!-- Assests -->
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/> -->
-    <link rel="stylesheet" href="{{ "css/bulma.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/index.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/header.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "css/footer.css" | prepend: site.baseurl }}">
-    <link rel="icon" type="image/ico" href="{{ assets/img/icon.ico | prepend: site.baseurl }}"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="{{ site.url }}/css/bulma.csss">
+    <link rel="stylesheet" href="{{ site.url }}/css/index.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/header.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/footer.css">
+    <link rel="icon" type="image/ico" href="{{ assets/img/icon.ico | prepend: site.url }}"/>
 
     <!-- Page -->
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <!-- SEO -->
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url | prepend: site.url }}">
     <meta name="description" content="{{ site.description }}">
 </head>
