@@ -247,7 +247,7 @@ Depois de um tempo analisando meu código, e tentando
   por vez(algo similar a método _next_permutation()_ em C++)
   e imprimi-lo logo em seguida.
 
-![](http://i.imgur.com/GaK7DkO.jpg)
+![](https://i.imgur.com/GaK7DkO.jpg)
 
  * Juntando esse problema das listas com fazer um algoritmo
    que não utiliza-se módulos, passei esses dois ultimos dias
