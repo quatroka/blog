@@ -3,7 +3,7 @@ layout: default
 ---
 <article>
     {% for post in site.posts %}
-        {% if post.categories.first != 'study-notes' %}
+        {% if post.categories.first == 'study-notes' %}
             <section class="section">
                 <div class="container">
                     <h1 class="title">

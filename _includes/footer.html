@@ -11,10 +11,14 @@
                         <h5>Pages</h5>
                         <ul class="menu-list menu-list-footer">
                             <li><a href="{{ site.url }}">Home</a></li>
+                            <a href="{{ site.url }}/study-notes">
+                                Study Notes
+                            </a>
                             {% for page in site.pages %}
                                 {% if page.title %}
                                     <li>
-                                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}
+                                        <a href="{{ page.url | prepend: site.baseurl }}">
+                                            {{ page.title }}
                                         </a>
                                     </li>
                                 {% endif %}
