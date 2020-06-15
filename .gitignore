@@ -3,3 +3,5 @@ _site/
 .idea/
 .vscode/
 off/
+.tool-versions
+.jekyll-cache/
