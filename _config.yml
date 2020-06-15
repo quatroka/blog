@@ -3,7 +3,7 @@ title: Quatroka | Blog
 email: contact@quatroka.com
 description: >
     Quatroka's Blog. Statistics, projects and postings on various subjects. - By: Leonardo S. Monteiro
-baseurl: "/"
+baseurl: ""
 url: "https://blog.quatroka.com"
 permalink: ":categories/:title"
 
